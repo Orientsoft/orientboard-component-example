@@ -33,7 +33,6 @@ class NewComponentModal extends React.Component {
   }
 
   open() {
-    console.log('open!')
     this.setState({
       show: true
     })
@@ -52,6 +51,7 @@ class NewComponentModal extends React.Component {
     , w: parseInt(this.refs.w.getValue())
     , h: parseInt(this.refs.h.getValue())
     , rotate: 0
+    // the short name of your component here
     , type: 'example'
     , data: {
         content: this.refs.content.getValue()
