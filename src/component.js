@@ -32,7 +32,7 @@ class Example extends React.Component {
           </Modal.Footer>
         </Modal>
 
-        <h1 style={{textAlign: 'center'}}>{this.state.content}</h1>
+        <h1 className={styles.text}>{this.state.content}</h1>
       </div>
     )
   }
