@@ -1,5 +1,4 @@
 import React from 'react'
-import classnames from 'classnames'
 import autobind from 'autobind-decorator'
 import styles from '../css/component.css'
 import {Modal, Button} from 'react-bootstrap'

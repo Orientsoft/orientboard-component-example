@@ -1,6 +1,6 @@
 import React from 'react'
 import autobind from 'autobind-decorator'
-import {Modal, Button, Input, ButtonInput} from 'react-bootstrap'
+import {Modal, Button, Input} from 'react-bootstrap'
 
 @autobind
 class NewComponentModal extends React.Component {
