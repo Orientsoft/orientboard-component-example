@@ -1,7 +1,7 @@
 import React from 'react'
 import autobind from 'autobind-decorator'
 import styles from '../css/component.css'
-import {Modal, Button} from 'react-bootstrap'
+import { Modal, Button } from 'react-bootstrap'
 import NewComponentConfig from './new-component-modal'
 
 @autobind
@@ -9,9 +9,29 @@ class Example extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showConfig: false
-    , content: this.props.data.content
+      showConfig: false,
+      content: this.props.data.content,
     }
+  }
+
+  toJson() {
+    // return the data you want to save as an object
+    return {
+      content: this.state.content,
+    }
+  }
+
+  openConfig() {
+    this.setState({ showConfig: true })
+  }
+
+  closeConfig() {
+    this.setState({ showConfig: false })
+  }
+
+  _applyConfig() {
+    // apply changes here
+    this.closeConfig()
   }
 
   render() {
@@ -35,30 +55,10 @@ class Example extends React.Component {
       </div>
     )
   }
+}
 
-  toJson() {
-    // return the data you want to save as an object
-    return {
-      content: this.state.content
-    }
-  }
-
-  openConfig() {
-    this.setState({
-      showConfig: true
-    })
-  }
-
-  closeConfig() {
-    this.setState({
-      showConfig: false
-    })
-  }
-
-  _applyConfig() {
-    // apply changes here
-    this.closeConfig()
-  }
+Example.propTypes = {
+  data: React.PropTypes.object,
 }
 
 Example.NewComponentConfig = NewComponentConfig
