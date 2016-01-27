@@ -8,6 +8,10 @@ import NewComponentConfig from './new-component-modal'
 class Example extends React.Component {
   constructor(props) {
     super(props)
+    // props:
+    // - data: object, your data
+    // - edit: boolean, whether your component should be editable
+    // - theme: string, the global theme
     this.state = {
       showConfig: false,
       content: this.props.data.content,
@@ -59,6 +63,7 @@ class Example extends React.Component {
 
 Example.propTypes = {
   data: React.PropTypes.object,
+  theme: React.PropTypes.string,
 }
 
 Example.NewComponentConfig = NewComponentConfig
